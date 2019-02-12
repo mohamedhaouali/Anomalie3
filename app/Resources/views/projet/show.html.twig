@@ -1,0 +1,40 @@
+{% extends '::layout/layoutAdmin.html.twig' %}
+
+{% block body %}
+    <h1>Projet</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ projet.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ projet.titre }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ projet.descriprtion }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{% if projet.etat %}Yes{% else %}No{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('projet_modifier') }}"class="btn btn-info">Retour a la page Modifier</a>
+        </li>
+        <li>
+            <a href="{{ path('projet_edit', { 'id': application.id }) }}" class="btn btn-success">Modifier</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" class="btn btn-danger" value="Supprimer" />
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

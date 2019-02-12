@@ -1,0 +1,24 @@
+suividesprojets_index:
+    path:     /
+    defaults: { _controller: "GestionProjetBundle:Suividesprojets:index" }
+    methods:  GET
+
+suividesprojets_show:
+    path:     /{id}/show
+    defaults: { _controller: "GestionProjetBundle:Suividesprojets:show" }
+    methods:  GET
+
+suividesprojets_new:
+    path:     /new
+    defaults: { _controller: "GestionProjetBundle:Suividesprojets:new" }
+    methods:  [GET, POST]
+
+suividesprojets_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GestionProjetBundle:Suividesprojets:edit" }
+    methods:  [GET, POST]
+
+suividesprojets_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GestionProjetBundle:Suividesprojets:delete" }
+    methods:  DELETE

@@ -1,0 +1,28 @@
+bug_index:
+    path:     /
+    defaults: { _controller: "GestionProjetBundle:Bug:index" }
+    methods:  GET
+
+bug_show:
+    path:     /{id}/show
+    defaults: { _controller: "GestionProjetBundle:Bug:show" }
+    methods:  GET
+
+bug_new:
+    path:     /new
+    defaults: { _controller: "GestionProjetBundle:Bug:new" }
+    methods:  [GET, POST]
+
+bug_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GestionProjetBundle:Bug:edit" }
+    methods:  [GET, POST]
+
+bug_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GestionProjetBundle:Bug:delete" }
+    methods:  DELETE
+
+bug_modifier:
+    path:     /modifier
+    defaults: { _controller: "GestionProjetBundle:Bug:modifier" } 

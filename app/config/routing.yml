@@ -1,0 +1,42 @@
+gestion_projet:
+    resource: "@GestionProjetBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+utilisateurs:
+    resource: "@UtilisateursBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+
+Bug:
+    resource: "@GestionProjetBundle/Resources/config/routing/bug.yml"
+    prefix:   /admin/bug   
+  
+Application:
+    resource: "@GestionProjetBundle/Resources/config/routing/application.yml"
+    prefix:   /admin/application
+    
+    
+
+        
+# app/config/routing.yml
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"          
+
+
+    
+module:
+        resource: "@GestionProjetBundle/Resources/config/routing/module.yml"
+        prefix:   /admin/module  
+        
+client:
+        resource: "@GestionProjetBundle/Resources/config/routing/client.yml"
+        prefix:   /admin/client       
+        
+projet:
+        resource: "@GestionProjetBundle/Resources/config/routing/projet.yml"
+        prefix:   /admin/projet        

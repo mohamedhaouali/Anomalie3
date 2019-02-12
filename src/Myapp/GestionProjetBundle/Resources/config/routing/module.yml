@@ -1,0 +1,29 @@
+module_index:
+    path:     /
+    defaults: { _controller: "GestionProjetBundle:Module:index" }
+    methods:  GET
+
+module_show:
+    path:     /{id}/show
+    defaults: { _controller: "GestionProjetBundle:Module:show" }
+    methods:  GET
+
+module_new:
+    path:     /new
+    defaults: { _controller: "GestionProjetBundle:Module:new" }
+    methods:  [GET, POST]
+
+module_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GestionProjetBundle:Module:edit" }
+    methods:  [GET, POST]
+
+module_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GestionProjetBundle:Module:delete" }
+    methods:  DELETE
+    
+    
+module_modifier:
+    path:     /modifier
+    defaults: { _controller: "GestionProjetBundle:Module:modifier" }     
