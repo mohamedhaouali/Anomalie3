@@ -25,12 +25,26 @@ class Utilisateurs extends BaseUser
    * @ORM\JoinColumn(nullable=true)
     */
    private $adresses;
-
+   
+  
+   
     public function __construct()
     {
         parent::__construct();
-         $this->adresses = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->adresses = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->enabled = false;
+        $this->locked = false;
+        $this->expired = false;
+        $this->roles = array();
+        $this->credentialsExpired = false;  
      
         
     }
+    
+    
+    
+    public function getParent() {
+        return 'FOSUserBundle';
+    }
+
 }

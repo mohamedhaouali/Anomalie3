@@ -82,7 +82,8 @@ class ApplicationController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+             $em=$this->getDoctrine()->getManager();
+             $em->flush();
 
             return $this->redirectToRoute('application_edit', array('id' => $application->getId()));
         }

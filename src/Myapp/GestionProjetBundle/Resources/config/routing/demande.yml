@@ -1,0 +1,28 @@
+demande_index:
+    path:     /
+    defaults: { _controller: "GestionProjetBundle:Demande:index" }
+    methods:  GET
+
+demande_show:
+    path:     /{id}/show
+    defaults: { _controller: "GestionProjetBundle:Demande:show" }
+    methods:  GET
+
+demande_new:
+    path:     /new
+    defaults: { _controller: "GestionProjetBundle:Demande:new" }
+    methods:  [GET, POST]
+
+demande_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GestionProjetBundle:Demande:edit" }
+    methods:  [GET, POST]
+
+demande_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GestionProjetBundle:Demande:delete" }
+    methods:  DELETE
+    
+demande_modifier:
+    path:     /modifier
+    defaults: { _controller: "GestionProjetBundle:Demande:modifier" }      

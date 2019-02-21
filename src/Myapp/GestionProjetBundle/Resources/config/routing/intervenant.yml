@@ -1,0 +1,28 @@
+intervenant_index:
+    path:     /
+    defaults: { _controller: "GestionProjetBundle:intervenant:index" }
+    methods:  GET
+
+intervenant_show:
+    path:     /{id}/show
+    defaults: { _controller: "GestionProjetBundle:intervenant:show" }
+    methods:  GET
+
+intervenant_new:
+    path:     /new
+    defaults: { _controller: "GestionProjetBundle:intervenant:new" }
+    methods:  [GET, POST]
+
+intervenant_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GestionProjetBundle:intervenant:edit" }
+    methods:  [GET, POST]
+
+intervenant_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GestionProjetBundle:intervenant:delete" }
+    methods:  DELETE
+    
+intervenant_modifier:
+    path:     /modifier
+    defaults: { _controller: "GestionProjetBundle:intervenant:modifier" }      

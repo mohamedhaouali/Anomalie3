@@ -6,7 +6,7 @@
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                 <th>Id</th>
+             
                 <th>Client</th>
                 <th>Titre</th>
                 <th>Description</th>
@@ -21,7 +21,7 @@
         {% for bug in bugs %}
             <tr>
                 
-                <td><a href="{{ path('bug_show', { 'id': bug.id }) }}">{{ bug.id }}</a></td>
+              
                 <td>{{ bug.client }}</td>
                 <td>{{ bug.titre }}</td>
                 <td>{{ bug.description }}</td>     

@@ -6,7 +6,6 @@
     <table>
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Titre</th>
                 <th>Description</th>
                 <th>Client</th>
@@ -17,7 +16,7 @@
         <tbody>
         {% for projet in projets %}
             <tr>
-                <td><a href="{{ path('projet_show', { 'id': projet.id }) }}">{{ projet.id }}</a></td>
+              
                 <td>{{ projet.titre }}</td>
                 <td>{{ projet.descriprtion }}</td>
                 <td>{{ projet.nom }}</td>

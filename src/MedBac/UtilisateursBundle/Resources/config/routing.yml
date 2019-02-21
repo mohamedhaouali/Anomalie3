@@ -2,5 +2,10 @@ utilisateurs_homepage:
     path:     /
     defaults: { _controller: UtilisateursBundle:Default:index }
 
-
+Page_Agent:
+    path:     /Agent
+    defaults: { _controller: UtilisateursBundle:Agent:Affich }
+Page_Client:
+    path:     /Client
+    defaults: { _controller: UtilisateursBundle:Client:index }    
 

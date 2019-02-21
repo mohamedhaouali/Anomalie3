@@ -1,0 +1,52 @@
+{% extends '::layout/layoutAdmin.html.twig' %}  
+
+{% block body %}
+    <h1>list des Suivi des demandes </h1>
+
+    <table>
+        <thead>
+            <tr>
+
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Intervenant</th>
+                <th>Client</th>
+                <th>Application</th>
+                <th>Module</th> 
+                <th>Etat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for demande in demandes %}
+            <tr>
+
+                <td>{{ demande.titre }}</td>
+                <td>{{ demande.description }}</td>
+                <td>{{ demande.nom4 }}</td>
+                <td>{{ demande.nom }}</td>
+                <td>{{ demande.titre1 }}</td>
+                <td>{{ demande.nom1 }}</td>
+                <td>{% if demande.etat %}<font color="green">En Cours</font>{% else %}<font color="red">Finit</font>{% endif %}</td>
+            
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('demande_show', { 'id': demande.id }) }}" class="btn btn-info"><i class="icon-book"></i>Afficher</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('demande_edit', { 'id': demande.id }) }}" class="btn btn-danger"><i class="icon-edit"></i>edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('demande_new') }}" class="btn btn-success">Ajout d'un nouvelle demande</a>
+        </li>
+    </ul>
+{% endblock %}

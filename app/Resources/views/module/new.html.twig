@@ -1,16 +1,63 @@
-{% extends '::layout/layoutAdmin.html.twig' %}
+{% extends '::layout/layoutAdmin.html.twig' %}       
 
-{% block body %}
-    <h1>Module creation</h1>
+{% block body %} 
 
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" class="btn btn-success" value="Ajouter" />
-    {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('module_modifier') }}"><input type="submit" class="btn btn-info" value="Retour a la page Modifier" /> </a>
-        </li>
-    </ul>
-{% endblock %}
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+              
+                <div id="collapseOne" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                        <div class="span4">
+                          
+                        </div>  
+
+                        <div class="span9 offset2">
+                           
+
+                            <div class="contact-form">
+                                {{ form_start(form) }}
+                                
+                                  <div class="form-group">
+                               <label>Nom du module  :</label> {{ form_widget(form.nom1) }}
+                                </div>
+                               
+                                
+                                
+                              
+                             
+                            </div>
+                                   
+                                   
+                                {{form_start(form)}} 
+                                {{form_widget(form)}}
+                                <input class="btn btn-success" type="submit" value="Ajouter" /> 
+                                {{form_end(form)}}
+
+
+
+
+
+                                {{ form_end(form) }}
+                                <br>
+                                <br>
+                                <ul>                                
+                                    <li><a href="{{ path('module_modifier') }}"><input type="submit" class="btn btn-info" value="Retour a la page Modifier" /> </a> </li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+                                
+                               
+                                
+        {% endblock %}                      
+
+
+

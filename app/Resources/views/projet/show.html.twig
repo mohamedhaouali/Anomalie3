@@ -5,10 +5,7 @@
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ projet.id }}</td>
-            </tr>
+      
             <tr>
                 <th>Titre</th>
                 <td>{{ projet.titre }}</td>
@@ -19,7 +16,7 @@
             </tr>
             <tr>
                 <th>Etat</th>
-                <td>{% if projet.etat %}Yes{% else %}No{% endif %}</td>
+                <td>{% if projet.etat %}<font color="green">En Cours</font>{% else %}<font color="red">Finit</font>{% endif %}</td>
             </tr>
         </tbody>
     </table>
@@ -29,7 +26,7 @@
             <a href="{{ path('projet_modifier') }}"class="btn btn-info">Retour a la page Modifier</a>
         </li>
         <li>
-            <a href="{{ path('projet_edit', { 'id': application.id }) }}" class="btn btn-success">Modifier</a>
+            <a href="{{ path('projet_edit', { 'id': projet.id }) }}" class="btn btn-success">Modifier</a>
         </li>
         <li>
             {{ form_start(delete_form) }}

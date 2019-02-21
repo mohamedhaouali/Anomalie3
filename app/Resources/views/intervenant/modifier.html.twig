@@ -1,0 +1,39 @@
+{% extends '::layout/layoutAdmin.html.twig' %}
+
+{% block body %}
+    <h1>Intervenants list</h1>
+
+     <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+               
+                <th>Nom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for intervenant in intervenants %}
+            <tr>
+              
+                <td>{{ intervenant.nom4 }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('intervenant_show', { 'id': intervenant.id }) }}" class="btn btn-info"><i class="icon-book"></i>Afficher</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('intervenant_edit', { 'id': intervenant.id }) }}" class="btn btn-danger"><i class="icon-edit"></i>edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('intervenant_new') }}" class="btn btn-success">Ajout d'un nouveaux intervenant</a>
+        </li>
+    </ul>
+{% endblock %}

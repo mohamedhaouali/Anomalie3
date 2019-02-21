@@ -71,7 +71,12 @@ swiftmailer:
     host: '%mailer_host%'
     username: '%mailer_user%'
     password: '%mailer_password%'
-    spool: { type: memory }
+    encryption: ssl
+    auth_mode: login
+    stream_options:
+        ssl:
+            allow_self_signed: true
+            verify_peer: false
 
 # app/config/config.yml
 assetic:
@@ -85,13 +90,12 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: MedBac\UtilisateursBundle\Entity\Utilisateurs
-    from_email:
-        address: "mohamed.haouali1@gmail.com"
-        sender_name: "mohamed" 
     registration:
         confirmation:
             enabled: true    
     from_email:
         address: "mohamed.haouali1@gmail.com"
         sender_name: "mohamed" 
-        template: 'email/registration.email.twig'
+        
+     
+        

@@ -14,29 +14,33 @@ app:
 
 Bug:
     resource: "@GestionProjetBundle/Resources/config/routing/bug.yml"
-    prefix:   /admin/bug   
+    prefix:   /bug   
   
 Application:
     resource: "@GestionProjetBundle/Resources/config/routing/application.yml"
-    prefix:   /admin/application
+    prefix:   /application
     
-    
-
-        
+       
 # app/config/routing.yml
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"          
-
-
     
 module:
         resource: "@GestionProjetBundle/Resources/config/routing/module.yml"
-        prefix:   /admin/module  
+        prefix:   /module  
         
 client:
         resource: "@GestionProjetBundle/Resources/config/routing/client.yml"
-        prefix:   /admin/client       
+        prefix:   /client       
         
 projet:
         resource: "@GestionProjetBundle/Resources/config/routing/projet.yml"
-        prefix:   /admin/projet        
+        prefix:   /admin/projet   
+        
+intervenant:
+        resource: "@GestionProjetBundle/Resources/config/routing/intervenant.yml"
+        prefix:   /intervenant        
+        
+demande:
+        resource: "@GestionProjetBundle/Resources/config/routing/demande.yml"
+        prefix:   /demande        
